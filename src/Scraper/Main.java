@@ -225,9 +225,9 @@ public class Main extends Application {
 			listView.getSelectionModel().select(0);
 		}
 	}
-	/*
+	
 	public void resizeToLimit() {
-		int limit = 600; //Could be changed to any value
+		/*int limit = 600; //Could be changed to any value
 		int index = listView.getSelectionModel().getSelectedIndex();
 		BufferedImage selectedImage = SwingFXUtils.fromFXImage(images.get(index), null);	//Convert png in images ArrayList to BufferedImage
 		
@@ -314,8 +314,8 @@ public class Main extends Application {
 			BufferedImage resizedBI = new BufferedImage(limit, limit, BufferedImage.TYPE_INT_RGB); //create a blank, RGB, same width and height
 			Image resized = SwingFXUtils.toFXImage(resizedBI, null);
 			imagePreview.setImage(resized);
-		}
-	}*/
+		}*/
+	}
 	
 	public void addBorders() throws IOException {
 		String url = listView.getSelectionModel().getSelectedItem().toString(); //Get the url from listView
