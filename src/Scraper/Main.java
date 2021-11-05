@@ -30,7 +30,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.imageio.ImageIO;
 
 public class Main extends Application {
@@ -226,7 +225,7 @@ public class Main extends Application {
 			listView.getSelectionModel().select(0);
 		}
 	}
-	
+	/*
 	public void resizeToLimit() {
 		int limit = 600; //Could be changed to any value
 		int index = listView.getSelectionModel().getSelectedIndex();
@@ -260,7 +259,7 @@ public class Main extends Application {
 				at.scale(2.0, 2.0);
 				AffineTransformOp scaleOp = 
 				   new AffineTransformOp(at, AffineTransformOp.TYPE_BILINEAR);
-				after = scaleOp.filter(before, after)*/
+				after = scaleOp.filter(before, after)
 				
 				double shrinkFactor = (x-limit)/x; //Calculate shrink factor (% to shrink by)
 				java.awt.Image resized = selectedImage.getScaledInstance(limit, (int)(y-(y*shrinkFactor)), java.awt.Image.SCALE_AREA_AVERAGING);
@@ -296,7 +295,7 @@ public class Main extends Application {
 			}
 		}
 		
-		/*if (x>y) {
+		if (x>y) {
 			double shrinkFactor = (x-limit)/x; //Calculate shrink factor (% to shrink by)
 			Image resized = selectedImage.getScaledInstance(limit, (int)(y-y*shrinkFactor), Image.SCALE_);
 			
@@ -315,8 +314,8 @@ public class Main extends Application {
 			BufferedImage resizedBI = new BufferedImage(limit, limit, BufferedImage.TYPE_INT_RGB); //create a blank, RGB, same width and height
 			Image resized = SwingFXUtils.toFXImage(resizedBI, null);
 			imagePreview.setImage(resized);
-		}*/
-	}
+		}
+	}*/
 	
 	public void addBorders() throws IOException {
 		String url = listView.getSelectionModel().getSelectedItem().toString(); //Get the url from listView
